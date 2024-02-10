@@ -1,7 +1,7 @@
 
 # Your Creative Space
 
-##This is a web application that allows users to create, edit, and manage their blog posts. This platform provides a user-friendly interface for blogging and sharing ideas.~
+## This is a web application that allows users to create, edit, and manage their blog posts. This platform provides a user-friendly interface for blogging and sharing ideas.~
 
 ## Features
 
