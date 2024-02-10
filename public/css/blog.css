@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.blog-site{
+  background-color: #eeecec;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 100px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(160, 157, 157, 0.1);
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.content h1 span {
+  color: #134038;
+  font-size: 3.0rem;
+}
+
+.content p {
+  font-size: 2.0rem;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content p span {
+  color: rgb(255, 145, 0);
+  font-size: 2.5rem;
+}
+
+.blog-site .logout {
+  padding: 10px 20px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.0rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-container .navbar-brand{
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: rgb(255, 145, 0);
+  text-decoration: none;
+  transition: 0.3s;
+}
