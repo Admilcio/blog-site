@@ -18,7 +18,6 @@
     MySQL: Database management system for storing user data and blog content.
     Js: JavaScript for building dynamic user interfaces.
 
-## Getting Started
 ## Prerequisites
 
     PHP installed on your machine.
