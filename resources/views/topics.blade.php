@@ -17,13 +17,13 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
           <div class="container-fluid nav-container">
-              <a class="navbar-brand" href="#"><i class="fa-regular fa-face-smile"></i>GoodNews</a>
+              <a class="navbar-brand" href="{{ url('/') }}"><i class="fa-regular fa-face-smile"></i>GoodNews</a>
               <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-link" href="{{ url('topics') }}">Topics</a>
+                      <a class="nav-link " {{-- aria-current="page" --}} href="#">Topics</a>
                       <a class="nav-link" href="#">About</a>
                       <a class="nav-link" href="#">Contact</a>
                   </div>
@@ -35,24 +35,37 @@
           </div>
       </nav>
   </header>
+  <div class="content">
+    <h1>Top <span>#10</span> topics of the week!</h1>
+    <p class="popping">What's on your mind today?</p>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="{{ asset('images/blog-4.webp') }}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ asset('images/blog-2.webp') }}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ asset('images/blog-3.jpg') }}" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+        </div>
+  </div>
   <div class="edit-bg container-fluid">
   <div class="edit-post container">
-    <h1>Write your thoughts and share with the world!</h1>
+    <h1>Top <span>#10</span>topics of the week!</h1>
   </div>
   <div class="blog-show container">
-    <form action="/edit-post/{{$post->id}}" method="post">
-      @csrf
-      @method('PUT')
-      <div class="edit edit-title">
-      <h2>Title:</h2>
-      <input type="text" name="title" id="title" value="{{$post->title}}" required>
-    </div>
-    <div class="edit edit-content">
-      <h2>Content:</h2>
-      <textarea name="content" rows="5">{{$post->content}}</textarea>
-    </div>
-      <button type="submit" class="edit-btn">Save Change</button>
-    </form>
+
   </div>
 </div>
 </div>

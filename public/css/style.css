@@ -67,7 +67,8 @@ section span:hover
 section .signin
 {
   position: absolute;
-  width: 400px;
+  max-width: 800px;
+  min-width: 400px;
   background: #222;  
   z-index: 1000;
   display: flex;
@@ -77,6 +78,23 @@ section .signin
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0,0,0,9);
 }
+
+section .signin h1 
+{
+  font-size: 2.5rem;
+  color: #fcf6f6;
+  font-weight: bold;
+  text-align: left;
+  margin-right: 20px;
+  font-family: 'Cinzel', serif;
+}
+
+section .signin p 
+{
+  color: #802525;
+  font-family: 'Cinzel', serif;
+}
+
 section .signin .content 
 {
   position: relative;
@@ -87,6 +105,11 @@ section .signin .content
   flex-direction: column;
   gap: 40px;
 }
+section .signin-bg{
+  box-shadow: 0 0 10px rgba(160, 157, 157, 0.1);
+  padding: 30px;
+  }
+
 section .signin .content h2 
 {
   font-size: 2em;
@@ -176,6 +199,10 @@ input[type="submit"]:active
 }
 @media (max-width: 600px)
 {
+  section .signin h1 
+  {
+    font-size: 1.5rem;
+  }
   section span 
   {
     width: calc(20vw - 2px);
