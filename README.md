@@ -17,6 +17,8 @@
     Bootstrap: Front-end framework for a responsive and sleek user interface.
     MySQL: Database management system for storing user data and blog content.
     Js: JavaScript for building dynamic user interfaces.
+    Html:For defining blocks of a webpage, headings, paragraphs, links, images, and more
+    Css:For styling and layout.
 
 ## Prerequisites
 
