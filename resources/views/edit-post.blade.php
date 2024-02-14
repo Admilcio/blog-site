@@ -17,16 +17,16 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
           <div class="container-fluid nav-container">
-              <a class="navbar-brand" href="#"><i class="fa-regular fa-face-smile"></i>GoodNews</a>
+              <a class="navbar-brand" href="{{ url('/') }}"><i class="fa-regular fa-face-smile"></i>GoodNews</a>
               <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="{{ url('topics') }}">Topics</a>
-                      <a class="nav-link" href="#">About</a>
-                      <a class="nav-link" href="#">Contact</a>
-                  </div>
+                <div class="navbar-nav">
+                  <a class="nav-link " aria-current="page" href="{{ url('user-posts') }}">Posts</a>
+                  <a class="nav-link" href="{{ url('about') }}">About</a>
+                  <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+              </div>
                   <form action="{{ route('logout') }}" method="POST" class="form-inline my-2 my-lg-0">
                       @csrf
                       <a class=" my-2 my-sm-0" href="logout.php"><button class="logout">Log out</button></a>

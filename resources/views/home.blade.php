@@ -2,8 +2,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +27,11 @@
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="{{ url('topics') }}">Topics</a>
-                      <a class="nav-link" href="#">About</a>
-                      <a class="nav-link" href="#">Contact</a>
-                  </div>
+                <div class="navbar-nav">
+                  <a class="nav-link " aria-current="page" href="{{ url('user-posts') }}">Posts</a>
+                  <a class="nav-link" href="{{ url('about') }}">About</a>
+                  <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+              </div>
                   <form action="{{ route('logout') }}" method="POST" class="form-inline my-2 my-lg-0">
                       @csrf
                       <a class=" my-2 my-sm-0" href="logout.php"><button class="logout">Log out</button></a>
@@ -109,9 +111,12 @@
               </div>
           </div>
       @endforeach
+ 
+    </div>
   </div>
 </div>
-
+<div class="pagination">
+  {{ $posts->links('pagination::bootstrap-5') }}
 </div>
 <div class="logout-botton">
   <form action="{{ route('logout') }}" method="POST" class="form-inline my-2 my-lg-0">

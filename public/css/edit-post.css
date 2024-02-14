@@ -14,14 +14,14 @@ body
 }
 
 .blog-site{
-  background-color: #fff !important;
+  background-color: #0D0D0D !important;
 }
 
 .edit-bg{
-  background-color:#0D0D0D;
+  /* background-color:#0D0D0D; */
   height: 80%;
   width: 80%;
-  border: 1px solid #000;
+ /*  border: 1px solid #000; */
   margin-top: 150px;
   padding: 20px;
 }
@@ -33,7 +33,7 @@ body
 
 .edit-post h1 {
   font-size: 2.5rem;
-  color: #fcf6f6;
+  color: #000;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -79,9 +79,10 @@ body
 }
 
 .edit h2{
-  font-size: 2em;
-  color: #0f0;
+  font-size: 1em;
+  color: rgb(8, 8, 8);
   text-transform: uppercase;
+  font-family: 'Cinzel', serif;
 }
 
 .blog-show button:hover{

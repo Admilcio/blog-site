@@ -21,7 +21,7 @@ Route::get('/', function () {
     $posts = [];
 
     if (auth()->check()) {
-        $posts = auth()->user()->posts()->latest()->get();
+        $posts = auth()->user()->posts()->latest()->paginate(3);
         return view('home', ['posts' => $posts]);
     } else {
         return view('/loginUser', ['posts' => $posts]);
@@ -44,4 +44,7 @@ Route::delete('/delete-post/{post}', [PostController::class, 'deletePost']);
 
 /* Page controller Route */
 
-Route::get('/topics', [PageController::class, 'index'])->name('topics');
+
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/user-posts', [PageController::class, 'userPosts'])->name('user-posts');

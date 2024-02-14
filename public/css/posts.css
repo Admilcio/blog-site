@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #d81717 !important;
+}
+
+.blog-show-post{
+  border-bottom: 3px solid #000;
+  /* background-color: #fff; */
+  padding: 20px;
+  box-shadow: 0 9px 9px rgba(65, 4, 4, 0.1);
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content{
+  background: #f5f2f2;
+}
